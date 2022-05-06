@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ZipGUIController">
+   <children>
+      <TextField fx:id="sourcePath" layoutX="220.0" layoutY="79.0" prefHeight="23.0" prefWidth="260.0" />
+      <TextField fx:id="targetPath" layoutX="220.0" layoutY="157.0" prefHeight="23.0" prefWidth="260.0" />
+      <Label layoutX="44.0" layoutY="79.0" prefHeight="23.0" prefWidth="151.0" text="要压缩的文件（夹）路径：" />
+      <Label layoutX="44.0" layoutY="157.0" prefHeight="23.0" prefWidth="151.0" text="保存压缩包的路径：" />
+      <TextField fx:id="name" layoutX="220.0" layoutY="225.0" prefHeight="23.0" prefWidth="260.0" />
+      <Label layoutX="44.0" layoutY="225.0" prefHeight="23.0" prefWidth="151.0" text="压缩后的压缩包名称：" />
+      <Button layoutX="434.0" layoutY="299.0" mnemonicParsing="false" onAction="#compress" prefHeight="55.0" prefWidth="93.0" text="开始压缩！" />
+      <Button layoutX="73.0" layoutY="299.0" mnemonicParsing="false" onAction="#check" prefHeight="55.0" prefWidth="93.0" text="检查" />
+      <Button layoutX="254.0" layoutY="299.0" mnemonicParsing="false" onAction="#clear" prefHeight="55.0" prefWidth="93.0" text="清空" />
+      <Button layoutX="497.0" layoutY="74.0" mnemonicParsing="false" onAction="#selectSource" prefHeight="33.0" prefWidth="28.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@directory.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="497.0" layoutY="152.0" mnemonicParsing="false" onAction="#selectTarget" prefHeight="23.0" prefWidth="32.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@directory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="542.0" layoutY="74.0" mnemonicParsing="false" onAction="#selectFileSource" prefHeight="33.0" prefWidth="28.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@file.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
